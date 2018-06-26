@@ -101,6 +101,10 @@ if($inputtext == "สวัสดี") {
 	$arrPostData['messages'][0]['type'] = 'text';
 	$arrPostData['messages'][0]['text'] = "https://www.youtube.com/watch?v=4TKCbe8jyRI";
 	
+}else if ($inputtext == "ขอป้าเปิดไหล่หน่อย") {
+	$arrPostData['messages'][0]['type'] = 'text';
+	$arrPostData['messages'][0]['text'] = "https://drive.google.com/open?id=1sZhVTlIqWtwB-DwNcXTHp3dRnAqNf6JP";
+	
 }
 
 if ($w[0] == "อากาศ" and isset($w[1])) {
