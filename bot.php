@@ -105,6 +105,10 @@ if($inputtext == "สวัสดี") {
 	$arrPostData['messages'][0]['type'] = 'text';
 	$arrPostData['messages'][0]['text'] = "https://drive.google.com/open?id=1sZhVTlIqWtwB-DwNcXTHp3dRnAqNf6JP";
 	
+}else if ($inputtext == "ขอคนเคยแมนหน่อย") {
+	$arrPostData['messages'][0]['type'] = 'text';
+	$arrPostData['messages'][0]['text'] = "https://drive.google.com/open?id=1ELA6rnHwz8kUfqSFXCVKtcpUCudtV7ZI";
+	
 }
 
 if ($w[0] == "อากาศ" and isset($w[1])) {
