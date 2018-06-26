@@ -16,7 +16,7 @@ if($inputtext == "สวัสดี") {
   
 } else if ($inputtext == "ชื่ออะไร") {
 	$arrPostData['messages'][0]['type'] = 'text';
-	$arrPostData['messages'][0]['text'] = "ชื่อเจวิส ครับท่าน";
+	$arrPostData['messages'][0]['text'] = "Cinnamon ครับท่าน";
   
 } else if ($inputtext == "ทำอะไรได้บ้าง") {
 	$arrPostData['messages'][0]['type'] = 'text';
@@ -97,9 +97,10 @@ if($inputtext == "สวัสดี") {
 	$arrPostData['messages'][0]['type'] = 'text';
 	$arrPostData['messages'][0]['text'] = "https://www.facebook.com/RSU.IT.SMT";
 	
-}else{
- 	$arrPostData['messages'][0]['type'] = 'text';
- 	$arrPostData['messages'][0]['text'] = "ไม่เข้าใจคำสั่งครับท่าน";
+}else if ($inputtext == "ขอเพลงหน่อย") {
+	$arrPostData['messages'][0]['type'] = 'text';
+	$arrPostData['messages'][0]['text'] = "https://www.youtube.com/watch?v=4TKCbe8jyRI";
+	
 }
 
 if ($w[0] == "อากาศ" and isset($w[1])) {
