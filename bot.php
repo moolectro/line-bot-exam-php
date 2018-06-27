@@ -29,6 +29,10 @@ if($inputtext == "สวัสดี") {
 	$arrPostData['messages'][0]['latitude'] = "13.808112";
 	$arrPostData['messages'][0]['longitude'] = "100.559255";
  
+} else if ($inputtext == "รายงาน") {
+	$arrPostData['messages'][0]['type'] = 'text';
+	$arrPostData['messages'][0]['text'] = "หลอดไฟ: นอน1-ปิด, นอน2-เปิด*, นอน3-ปิด | แอร์: นอน1-เปิด*, นอน2-เปิด*, นอน3-ปิด";
+
 } else if ($inputtext == "เยี่ยม") {
 	$arrPostData['messages'][0]['type'] = "sticker";
 	$arrPostData['messages'][0]['packageId'] = "1";
