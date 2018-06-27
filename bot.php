@@ -22,46 +22,6 @@ if($inputtext == "สวัสดี") {
 	$arrPostData['messages'][0]['type'] = 'text';
 	$arrPostData['messages'][0]['text'] = "เปิด ปิด ไฟ แอร์ เช็คอุณหภูมิ ครับท่าน";
   
-} else if ($inputtext == "เปิดไฟนอน1") {
-  	$mode = curl_init("http://128.199.137.43:3000/smtbot2017/mode/5/o");
-  	curl_exec($mode);
-  	$digital = curl_init("http://128.199.137.43:3000/smtbot2017/digital/5/1");
-  	curl_exec($digital);
-	$arrPostData['messages'][0]['type'] = 'text';
-	$arrPostData['messages'][0]['text'] = "เปิดไฟแล้วครับ";
-  
-} else if ($inputtext == "ปิดไฟนอน1") {
-  	$mode = curl_init("http://128.199.137.43:3000/smtbot2017/mode/5/o");
-  	curl_exec($mode);
-  	$digital = curl_init("http://128.199.137.43:3000/smtbot2017/digital/5/0");
-  	curl_exec($digital);
-	$arrPostData['messages'][0]['type'] = 'text';
-	$arrPostData['messages'][0]['text'] = "ปิดไฟแล้วครับ";
-
-} else if ($inputtext == "ความชื้น") {
-  	$s = file_get_contents("http://128.199.137.43:3000/smtbot2017/variable/humidity");
- 	 $h = json_decode($s, true);
-  	$hu = $h['humidity'];
-	$arrPostData['messages'][0]['type'] = 'text';
-	$arrPostData['messages'][0]['text'] = "ความชื้นสัมพัธน์ตอนนี้ " . $hu . "%";
-
-} else if ($inputtext == "อุณหภูมิ") {
-  	$s = file_get_contents("http://128.199.137.43:3000/smtbot2017/variable/temperature");
-  	$h = json_decode($s, true);
-  	$hu = $h['temperature'];
-	$arrPostData['messages'][0]['type'] = 'text';
-	$arrPostData['messages'][0]['text'] = "อุณหภูมิตอนนี้ " . $hu . " C";
-
-} else if ($inputtext == "อากาศ") {
-  	$s = file_get_contents("http://128.199.137.43:3000/smtbot2017/variable/temperature");
-  	$h = json_decode($s, true);
-  	$hu = $h['temperature'];
- 	$s2 = file_get_contents("http://128.199.137.43:3000/smtbot2017/variable/humidity");
- 	$h2 = json_decode($s2, true);
- 	$hu2 = $h2['humidity'];
-	$arrPostData['messages'][0]['type'] = 'text';
-	$arrPostData['messages'][0]['text'] = "อุณหภูมิ " . $hu . " C | ความชื้น " . $hu2 . " %";
-
 } else if ($inputtext == "แผนที่") {
 	$arrPostData['messages'][0]['type'] = "location";
 	$arrPostData['messages'][0]['title'] = "ศูนย์ศึกษาวิภาวดี มหาวิทยาลัยรังสิต";
@@ -69,10 +29,6 @@ if($inputtext == "สวัสดี") {
 	$arrPostData['messages'][0]['latitude'] = "13.808112";
 	$arrPostData['messages'][0]['longitude'] = "100.559255";
  
-} else if ($inputtext == "รายงาน") {
-	$arrPostData['messages'][0]['type'] = 'text';
-	$arrPostData['messages'][0]['text'] = "หลอดไฟ: นอน1-ปิด, นอน2-เปิด*, นอน3-ปิด | แอร์: นอน1-เปิด*, นอน2-เปิด*, นอน3-ปิด";
-
 } else if ($inputtext == "เยี่ยม") {
 	$arrPostData['messages'][0]['type'] = "sticker";
 	$arrPostData['messages'][0]['packageId'] = "1";
@@ -102,8 +58,9 @@ if($inputtext == "สวัสดี") {
 	$arrPostData['messages'][0]['text'] = "https://www.youtube.com/watch?v=4TKCbe8jyRI";
 	
 }else if ($inputtext == "ขอป้าเปิดไหล่หน่อย") {
-	$arrPostData['messages'][0]['type'] = 'text';
-	$arrPostData['messages'][0]['text'] = "https://drive.google.com/open?id=1sZhVTlIqWtwB-DwNcXTHp3dRnAqNf6JP";
+	$arrPostData['messages'][0]['type'] = 'image';
+	$arrPostData['messages'][0]['originalContentUrl'] = "https://drive.google.com/open?id=1sZhVTlIqWtwB-DwNcXTHp3dRnAqNf6JP";
+	$arrPostData['messages'][0]['previewImageUrl'] = "https://drive.google.com/open?id=1sZhVTlIqWtwB-DwNcXTHp3dRnAqNf6JP";
 	
 }else if ($inputtext == "ขอคนเคยแมนหน่อย") {
 	$arrPostData['messages'][0]['type'] = 'text';
