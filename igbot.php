@@ -1,5 +1,5 @@
 <?php
-$access_token="1499419437.09aa1fd.0d00670bb5f8428d9e05ae9a3fd747af";
+$access_token="1499419437.674ee85.7552208e9b78470cbdb65cf1923b1ff3";
 $photo_count=10; // จำนวนรูปภาพที่ต้องการดึงมาแสดง
      
 $json_url="https://api.instagram.com/v1/users/self/media/recent/?";
