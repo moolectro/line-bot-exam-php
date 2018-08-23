@@ -1,3 +1,4 @@
+<?php
 $access_token="1499419437.09aa1fd.0d00670bb5f8428d9e05ae9a3fd747af";
 $photo_count=10; // จำนวนรูปภาพที่ต้องการดึงมาแสดง
      
@@ -22,3 +23,4 @@ foreach ($obj['data'] as $post) {
     // ดู key,value ทั้งหมดจาก json นะครับ
     // https://api.instagram.com/v1/users/self/media/recent/?access_token=1499419437.09aa1fd.0d00670bb5f8428d9e05ae9a3fd747af&count=1
 }
+?>
